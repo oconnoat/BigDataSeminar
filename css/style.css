@@ -1,0 +1,232 @@
+/* Custom CSS File for the impress presentation */
+/* To add Google Fonts, one option is to use @import(url('')); if you do, it must go before all other declarations except @charset
+ * another option is to create a font source block. This will allow you to have a local fallback. It also allows Truetype fallbacks an so on.
+ *
+ *
+ *
+ * An example block below 
+ * @font-face {
+ * font-family: 'Satisfy';
+ *  font-style: normal;
+ *  font-weight: 400;
+ *  src: local('Satisfy') url(http://themes.googleusercontent.com/static/fonts/satisfy/v4/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff) format('woff'),
+ *  local('Satisfy') url('Satisfy.woff') format('woff'); 
+ * }
+ *
+ *
+ * */
+
+/* hint and unsupported content */
+div.fallback-message {
+    display: none;
+}
+
+
+div.hint {
+    display: none;
+}
+/* Tag Markup */
+div.step{
+    min-width: 900px;
+    min-height: 700px;
+    font-size: 48px;
+}
+
+/* Impress-related markup */
+.impress-enabled .step.active {
+    background-color: #fff;
+}
+
+/* make the non-active steps transparent */
+.step:not(.active) { opacity: 0.33; }
+
+/* Per-slide Markup uses .impress-on-slideID */
+.impress-not-supported div.fallback-message{
+    display: block;
+    height: 100px;
+    width: 250px;
+    margin-left: -125px;
+    margin-top: -50px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}
+.impress-on-title div.hint{
+   display: block;
+   font-size: 14px;
+   font-style: italic;
+   text-align: center;
+   width: 250px;
+   position: absolute;
+   left: 50%;
+   margin-left: -125px;
+}
+.impress-on-overview div:hover{
+    opacity: 1;
+    background-color: #fff;
+}
+
+/* specific divs */
+div#title h1{
+    text-align: center;
+    margin: 10px;
+    font-size: 128px;
+    font-family: 'Calligraffitti', monospace;
+}
+div#title h2,p{
+   text-align: center; 
+}
+div#threeVs{
+    font-family: sans-serif;
+    background-color: #333; 
+    color: #dddddd;
+}
+div#threeVs h1{
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    font-family: 'Special Elite';
+
+}
+div#threeVs h2{
+    font-size: 32px;
+    font-style: italic;
+}
+div#threeVs .third {
+    position: absolute;
+    width: 30%;
+    margin: 1%;
+    height: 70%;
+}
+div#threeVs #col_variety{
+    left: 0;
+}
+div#threeVs #col_volume{
+    left: 33%;
+}
+div#threeVs #col_velocity{
+    left: 66%;
+}
+div#threeVs .fourth {
+    margin: 0;
+    padding: 0;
+    height: 25%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 70%;
+}
+div#overview {
+    display: none;
+}
+
+div#volume h1{
+    text-align: center;
+    margin: 10px;
+    font-size: 96px;
+    font-family: 'Special Elite', sans-serif;
+}
+
+div#variety{
+    text-align: center;
+    font-size: 128px;
+}
+
+div#variety i{
+    top: 25%;
+    margin: 5%;
+}
+
+div#variety i:hover{
+    color: #ff0000;
+}
+
+div#humanity li{
+    text-align: center;
+}
+div#humanity h1{
+    text-align: center;
+    margin-top: 10%;
+    color: #ff0000;
+    font-family: 'Calligraffitti';
+    font-style: italic;
+}
+div#process ol {
+    list-style-type: lower-roman;
+    width: 45%;
+    float: left;
+}
+
+div#Applications ul{
+    list-style-type: disc;
+    font-size: 32px;
+
+
+}
+div#Techniques blockquote{
+    margin-top: 25%;
+    font-style: italic;
+    text-align: justify;
+}
+
+div#Techniques blockquote:before {
+  color: #ccc;
+  content: '\201C';
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+div#Techniques blockquote:after {
+  color: #ccc;
+  content: '\201E';
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-left: 0.25em;
+}
+
+div#mapreduce img {
+    width: 80%;
+    left: 10%;
+}
+
+div#technology ul{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+div#technology li{
+    text-align: center;
+    font-size: 64px;
+    font-family: monospace;
+    margin-bottom: 12px;
+
+}
+div#Sharing img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -125px;
+    margin-left: -125px;
+}
+
+div#Enrich p{
+    text-align: justify;
+    font-size: 32px;
+    font-family: sans-serif;
+    margin-bottom: 5%;
+}    
+div#Enrich li{
+    text-align: center;
+}
+
+div#openrefine img{
+    margin-left: -253px;
+    margin-top: -60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+}

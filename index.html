@@ -1,0 +1,245 @@
+<!doctype html>
+<!-- Based on impress.js Copyright 2011-2012 Bartek Szopka
+
+Released under the MIT and GPL (version 2 or later) Licenses.
+
+Note, this is a total mess of inconsistent css, html, javascript and content. 
+It's probably a good example of how difficult it is for me to separate content with presentation in practice.
+-->
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title> </title>
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Calligraffitti|Special+Elite' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="lib/fontawesome/css/font-awesome.min.css">
+    <!-- <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- basic setup -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
+    <!-- menus and buttons -->
+    <link rel="stylesheet" type="text/css" href="css/navmenu.css" />
+
+    <!-- presentation-specific styling, which might be done with less instead of css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <!-- <link rel="stylesheet/less" type="text/css" href="less/style.less"> -->
+
+
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+</head>
+
+<body class="impress-not-supported">
+
+<!--
+    For example this fallback message is only visible when there is `impress-not-supported` class on body.
+-->
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress">
+    
+    <!-- each slide must be a div with class step,  must have some co-ordinates -->
+    <div id="title" class="step" data-x="0" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>Big Data &amp; the Humanities</h1> 
+        <h2>Alexander O&apos;Connor &lt;Alex.OConnor@scss.tcd.ie&gt;</h2>
+        <p><i class="fa fa-twitter fa-large"></i>@uberalex</p>
+        <div class="notes">
+            <!--speaker notes-->
+            <p>This is part one of two for a seminar on Big Data &amp; NLP for the TCD DH Masters.</p>
+        </div>
+    </div>
+    <div id="threeVs" class="step" data-x="1200" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <div class="third" id="col_volume">
+            <h1>Volume</h1>
+        </div>
+        <div class="third" id="col_variety">
+            <h1>Variety</h1>
+        </div>
+        <div class="third" id="col_velocity">
+            <h1>Velocity</h1>
+        </div>
+        <div class="fourth" id="veracity">
+            <h2>(Veracity)</h2>
+        </div>
+
+        <div class="notes">
+            <!--speaker notes-->
+            <p>The standard approach to describing Big Data is that it is data that can't be analysed using conventional Business Intelligence methods. The origins of the term
+            are highly industrial. As a marketing term, and especially given the rate of technology and hype, it's a pretty vague term. The important thing I want to convey is 
+            what the approach means, what the technologies are and how it might be useful to humanities work.</p>
+        </div>
+    </div>
+
+    <div id="volume" class="step" data-x="1200" data-y="2400" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <h1>A <span id="firstslot">hundred</span> documents isn't Big, you know what's <strong>BIG?</strong></h1>
+        <h1>A <span id="secondslot">thousand</span> documents.</h1> 
+        <div class="notes">with apologies to <a href="http://www.imdb.com/title/tt1285016/">David Fincher</a></div>
+    </div>
+    <div id="variety" class="step" data-x="1200" data-y="3600" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <i class="fa fa-6x fa-file-image-o"></i><i class="fa fa-6x fa-file-archive-o"></i><i class="fa fa-6x fa-file-audio-o"></i><br />
+        <i class="fa fa-6x fa-file-pdf-o"></i><i class="fa fa-6x fa-file-video-o"></i><i class="fa fa-6x fa-file-code-o"></i>
+    </div>
+
+    <div id="velocity" class="step" data-x="1200" data-y="4800" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <img src="img/minute.jpg" alt="Intel Internet Minute Infographic" />
+    </div>
+
+    <div id="humanity" class="step" data-x="1200" data-y="6000" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <ul>
+            <li><a href="http://www.oldbaileyonline.org/static/Project.jsp">Old Bailey Online</a><br /> 197,000 trials</li>
+            <li><a href="www.hathitrust.org">Hathi Trust</a><br /> Ten million books</li>
+            <li><a href="http://www.gutenberg.org/">Project Gutenberg</a><br /> 45,000 ebooks</li>
+            <li><a href="http://primary-sources.eui.eu/website/manuscriptorium">Manuscriptorium</a><br /> Five million digital images of manuscripts</li>
+        </ul>
+        <h1>What's the analytical framework?</h1>
+        <div class="notes">Some of these have extensive encoded metadata, some are extensively transcribed. Numbers are nice, but what really matters is whether
+        the approach is actually meaningful</div>
+    </div>
+
+    <div id="process" class="step" data-x="2400" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <ol>
+            <li>Gather</li>
+            <li>Digitise</li>
+            <li>Clean</li>
+            <li>Organise</li>
+            <li>Enrich</li>
+            <li>License</li>
+            <li>Publish</li>
+        </ol>
+        <ol>
+            <li>Discovering</li>
+            <li>Annotating</li>
+            <li>Comparing</li>
+            <li>Referring</li>
+            <li>Sampling</li>
+            <li>Illustrating</li>
+            <li>Representing</li>
+        </ol>
+        <div class="notes">The first step is to collect the data: from twitter, from a dusty archive in darkest Offaly, anywhere.<br />The next thing is to create the digital incarnation of the collection: photographs, transcriptions, points on a map. The data needs to be made consistent so that it can be used. Internal consistency is important, but also with reference to other collections. Enrichment can be manual, automatic or both, and might include highlighting entities (people, places, times, dates, etc) or linking to other databases. The licensing is not trivial, but is a key component of what's then offfered.
+    </div>
+</div>
+    <div id="technology" class="step" data-x="2400" data-y="0" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <ul>
+        <li>Big Data Tools</li>
+        <li>{S,P,I,N}-AAS</li>
+        <li>Statistical Tools</li>
+    </ul>
+            <div class="notes">The software is almost never the problem: you need to have a clear understanding of what you want to do and how you want to achieve it. You probably do need a programmer, or a technical person, but it's important to realise that <em>maintenance</em> is often far harder than <em>deployment</em>.
+    </div>
+</div>
+    <div id="mapreduce" class="step" data-x="2400" data-y="1200" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+        <img src="img/mapreduce.png" />
+        <img src="img/hadoop.jpg" />
+        <div class="notes">mapreduce kicked off the big data revolution because it was the technique that made truly massive quantities of truly diverse data accessible. To be honest, I doubt most projects will need to use industrial-scale tools like this. If you do, you probably also need a team of professionals.<br /> Image Source: Google</div>
+</div>
+    <div id="openrefine" class="step" data-x="2400" data-y="2400" data-z="0" data-rotate-x="90" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+            <a href="http://openrefine.org/"><img src="img/openrefine.png" /></a>
+    </div>
+      <div id="Enrich" class="step" data-x="2400" data-y="3600" data-z="0" data-rotate-x="0" data-rotate-y="90" data-rotate-z="0" data-scale="1">
+          <p><u>The Last Nine Days of the Bismarck</u> tells the story of the breakout of the German battleship <u>Bismarck</u> into the <u>Atlantic</u> as a major threat to the convoys that sustained Britain in the early days of <u>World War II</u> and the <u>Royal Navy</u>'s desperate pursuit and destruction of the <u>Bismarck</u>.</p>
+            <ul>
+                <li><a href="http://nlp.stanford.edu/software/CRF-NER.shtml">Stanford Named Entity Recogniser</a></li>
+                <li><a href="http://mallet.cs.umass.edu/">Mallet</a></li>
+                <li><a href="https://code.google.com/p/tesseract-ocr/">Tesseract OCR</a></li>
+            </ul>
+            <div class="notes">Quote from Wikipedia: <a href="http://en.wikipedia.org/wiki/Last_Nine_Days_of_the_Bismarck">http://en.wikipedia.org/wiki/Last_Nine_Days_of_the_Bismarck!</a><br />Often tools like this need a lot of expertise to use correctly: you need to train the system and make sure its behaviour is what you expect.</div>
+</div>
+    <div id="CKAN" class="step" data-x="2400" data-y="4800" data-z="0" data-rotate-x="0" data-rotate-y="90" data-rotate-z="0" data-scale="1">
+        <img src="img/ckan.png" />
+        <div class="notes">Other platforms include fedora commons, omeka, drupal. It's very important to realise the technical cost of each of these tools and their customisation. What do you get out of the box?</div>
+    </div>
+
+
+<div id="Applications" class="step" data-x="3600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <ul>
+      <li>Crowdsourcing</li>
+      <li>Text- and data-mining of historical and archival material.</li>
+      <li>Social media analysis, including sentiment analysis</li>
+      <li>Cultural analytics</li>
+      <li>Cyber-infrastructures for the humanities</li>
+      <li>Relationship between ‘small data’ and big data</li>
+      <li>NoSQL databases and their application, e.g. document and graph databases</li>
+      <li>Big data and the construction of memory and identity</li>
+      <li>Big data and archival practice</li>
+      <li>Construction of big data</li>
+      <li>Big data in Heritage</li>
+    </ul>
+    <div class="notes">Source: <a href="http://bighumanities.net/">http://bighumanities.net/</a></div>
+</div>
+
+<div id="Techniques" class="step" data-x="3600" data-y="1200" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <blockquote>Ideally, we want to combine the human ability to understand and interpret&mdash;which computers can’t completely match yet&mdash;and the computer’s ability to analyze massive data sets using algorithms we create.</blockquote>
+    <div class="notes">Manovich, L; Trending: The Promises and the Challenges of Big Social Data; <a href="http://dhdebates.gc.cuny.edu/debates/text/15">http://dhdebates.gc.cuny.edu/debates/text/15</a></div>
+</div>
+    
+<div id="Sharing" class="step" data-x="3600" data-y="2400" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <img src="img/ldmug.jpg" />
+</div>
+
+<div id="Conclusion" class="step" data-x="4800" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="1">
+    <img src="img/borrowcup.png" width=500 />
+</div>
+
+    <!-- keep an overview slide, you may wish to change the scaling and / or the co-ordinates -->
+    <div id="overview" class="step" data-x="600" data-y="0" data-z="0" data-rotate-x="0" data-rotate-y="0" data-rotate-z="0" data-scale="2">
+    </div>
+
+</div>
+<!-- end of impress -->
+
+<!-- a bar at the top with a timer. You could put other text or info in here by adding more spans -->
+<div id="navbar"><div id="timebar">&nbsp;</div><p> <span id="timer">Click to Start Timer.</span></p><p><input id="notebox" type="checkbox" /><label for="notebox">show notes</label></p></div>
+
+<!-- a little menu based on the slides -->
+<div class="hint note">
+    <p>Use the spacebar or arrow keys to navigate</p>
+</div>
+
+<!-- clicking on this reveals the quick-navigation bar -->
+<div id="menubutton" tabindex="1">
+    <i class="fa fa-bars fa-lg"></i>
+</div>
+
+<!-- quickly get to different slides here, the list is populated from the IDs of the slides -->
+<div id="navmenu">
+</div>
+
+
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").append('p').text('Tap on the left or right to navigate');
+}
+</script>
+
+<!-- LESS CSS -->
+<script src="lib/less.js/dist/less-1.7.5.js"></script>
+<!-- Load the presentation tool -->
+<script src="lib/impress.js/js/impress.js"></script>
+<!-- Load D3 -->
+<script src="lib/d3/d3.min.js"></script>
+<!-- Load the timer -->
+<script src="js/timer.js"></script>
+<!-- Menu -->
+<script src="js/navmenu.js"></script>
+<!-- -->
+<script src="js/volume.js"></script>
+
+<!-- Initialisation -->
+<script>impress().init();</script>
+<script>var time = 1000 * 60 * 30;
+        var clock = timer(time, update);
+</script>
+</body>
+</html>
